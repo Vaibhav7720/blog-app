@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import { Label, TextInput, Button, Spinner, Alert } from "flowbite-react";
 export default function SignUp() {
   const [formData, setFormData] = useState({});
@@ -42,7 +42,7 @@ export default function SignUp() {
         <div className="flex-1">
           <Link to="/" className="font-bold dark:text-white text-4xl">
             <span className="px-2 py-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg text-white">
-              Vaibhav's
+              {" Vaibhav's"}
             </span>
             Blog
           </Link>
