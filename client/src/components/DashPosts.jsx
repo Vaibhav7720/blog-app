@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { HiOutlineExclamationCircle } from "react-icons/hi";
-import { set } from "mongoose";
 
 export default function DashPosts() {
   const { currentUser } = useSelector((state) => state.user);
@@ -29,6 +28,7 @@ export default function DashPosts() {
     if (currentUser.isAdmin) {
       fetchPosts();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentUser._id]);
 
   const handleShowMore = async () => {
@@ -87,6 +87,7 @@ export default function DashPosts() {
               </Table.HeadCell>
             </Table.Head>
             {userPosts.map((post) => (
+              // eslint-disable-next-line react/jsx-key
               <Table.Body className="divide-y">
                 <Table.Row className="bg-white dark:border-gray-700 dark:bg-gray-800">
                   <Table.Cell>
