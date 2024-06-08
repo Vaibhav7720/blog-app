@@ -28,7 +28,6 @@ export default function Comment({ comment, onLike, onEdit, onDelete }) {
 
   const handleEdit = () => {
     setIsEditing(true);
-    // eslint-disable-next-line react/prop-types
     setEditedContent(comment.content);
   };
 

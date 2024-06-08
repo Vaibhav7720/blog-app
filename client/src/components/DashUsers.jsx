@@ -28,6 +28,7 @@ export default function DashUsers() {
     if (currentUser.isAdmin) {
       fetchUsers();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentUser._id]);
 
   const handleShowMore = async () => {
